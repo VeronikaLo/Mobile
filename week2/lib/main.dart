@@ -7,10 +7,10 @@ void main() {
       title: "My first App",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("My first app",), centerTitle: true,
+          title: const Text("My first app",), centerTitle: true,
         ),
         body: Column(
-          children: [
+          children:const [
             Image(image: AssetImage('assets/images/winnie-pooh.jpg')),
             Text(
               'Happy Bithday to you!\n' 
