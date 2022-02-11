@@ -49,8 +49,9 @@ class ContactCard extends StatelessWidget {
           children: [
             Container(
               alignment: Alignment.center,
-              width: 80,
+              width: 85,
               padding: const EdgeInsets.all(5),
+              margin: const EdgeInsets.only(right: 10) ,
               child: Image.asset("assets/images/pic1.png"),
             ),
             Column(
@@ -58,14 +59,10 @@ class ContactCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 Text('Mark Müller',
-                    textDirection: TextDirection.ltr,
-                    style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                Text(' Tel: +49 174 525-347-85',
-                    textDirection: TextDirection.ltr,
+                    style:TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                Text('Tel: +49 174 525-347-85',
                     style: TextStyle(fontSize: 16, color: Colors.black)),
-                Text(' geb: 12.03.1979',
-                    textDirection: TextDirection.ltr,
+                Text('geb: 12.03.1979',
                     style: TextStyle(fontSize: 16, color: Colors.black))
               ],
             )
