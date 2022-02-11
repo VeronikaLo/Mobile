@@ -48,7 +48,7 @@ void decrement(){
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("Stateful Widget Vs. Stateless Widget"),
+          title: const Text("Stateful Widget vs. Stateless Widget"),
           centerTitle: true,
         ),
         body: Center(
@@ -57,14 +57,15 @@ void decrement(){
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                IconButton(
+                FloatingActionButton.small(
+                  backgroundColor: Colors.pink,
                   onPressed: () {
                   decrement();
                   },
 
-                  icon: const Icon(
+                  child: const Icon(
                     Icons.remove,
-                    color: Colors.pink,
+                    color: Colors.white,
                     ),
                 ),
                 TextField(
@@ -82,14 +83,15 @@ void decrement(){
                     });
                   },
                 ),
-                IconButton(
+                FloatingActionButton.small(
+                  backgroundColor: Colors.pink,
                   onPressed: () {
                     increment();
                   },
 
-                  icon: const Icon(
+                  child: const Icon(
                     Icons.add,
-                    color: Colors.pink,
+                    color: Colors.white,
                     ),
                 ),
                 Text("Винни-пух и пятачок отдыхали на веточке дуба. Пух сказал: ”Интересно, как долго мы ещё будем здесь торчать?” Пятачок ответил: ” Я думаю, ещё лет десять.",
