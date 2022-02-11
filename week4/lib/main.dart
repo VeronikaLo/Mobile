@@ -75,7 +75,7 @@ void decrement(){
                   inputFormatters: <TextInputFormatter>[
                     FilteringTextInputFormatter.digitsOnly
                   ], // Only numbers can be entered
-                  onChanged: (String font) {
+                  onSubmitted: (String font) {
 										double newFont = double.parse(font);
                     setState(() {
                       fontSize = newFont;
