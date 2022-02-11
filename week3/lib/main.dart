@@ -21,7 +21,7 @@ void main() {
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   YellowBalloon(),
                   YellowBalloon(),
                   RedBalloon(),
@@ -30,7 +30,7 @@ void main() {
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   YellowBalloon(),
                   RedBalloon(),
                   RedBalloon(),
@@ -39,7 +39,7 @@ void main() {
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
+                children: const [
                   RedBalloon(),
                   YellowBalloon(),
                   RedBalloon(),
@@ -52,7 +52,7 @@ void main() {
 }
 
 class YellowBalloon extends StatelessWidget {
-  YellowBalloon({Key? key}) : super(key: key);
+  const YellowBalloon({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -68,7 +68,7 @@ class YellowBalloon extends StatelessWidget {
 }
 
 class RedBalloon extends StatelessWidget {
-  RedBalloon({Key? key}) : super(key: key);
+  const RedBalloon({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
