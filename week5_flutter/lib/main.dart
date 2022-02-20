@@ -120,9 +120,10 @@ class MyFormState extends State {
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       Color color = Colors.red;
-                      String text;
+                      String text ;
 
-                      if (_choice1 && _choice2 && _choice3 == false) {
+                    // if(_choice1==false && _choice2==false && _choice3==false )
+                      if (!_choice1 && !_choice2 && !_choice3) {
                         text = 'Выберите корм питомца';
                       } else {
                         text = 'Форма успешно заполнена';
