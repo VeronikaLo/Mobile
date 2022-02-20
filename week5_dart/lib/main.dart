@@ -30,7 +30,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   
-  String userAge = "";
+  String userMessage = "";
+  int userAge = 0;
 
   String checkAge( int age){
   
@@ -43,7 +44,7 @@ class _HomeState extends State<Home> {
     }
     
     else{
-        return "Вам можно на этот фильм";
+        return "Вам можно на этот фильм\n   Приятного просмотра!";
     }
 }
 
@@ -66,17 +67,21 @@ class _HomeState extends State<Home> {
                   SizedBox(
                     width: 200,
                     child: TextField(
-                      //controller: TextEditingController()..text = age.toString(),
+                      controller: TextEditingController()..text = userAge.toString(),
                       decoration: const InputDecoration(labelText: "Ваш возраст", border: OutlineInputBorder(),),
                       keyboardType: TextInputType.number,
                       textAlign: TextAlign.center,
                       inputFormatters: <TextInputFormatter>[
                       FilteringTextInputFormatter.digitsOnly
                       ], // Only numbers can be entered
-                      onSubmitted: (String age) {
+                      onSubmitted: (String input) {
+                        int age = int.parse(input);
                     setState(() {
-                      //
-                      userAge = checkAge(int.parse(age));
+                      
+                      userAge = age;
+                      userMessage = checkAge(userAge);
+                      userAge = 0;
+                      
                     });
                   },
                 ), 
@@ -84,8 +89,8 @@ class _HomeState extends State<Home> {
                   
                   Container(
                     margin: const EdgeInsets.only(top: 50.0),
-                    child: Text(userAge,
-                      style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
+                    child: Text(userMessage,
+                      style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.blue)
                     ),
                   ),
                   ],
