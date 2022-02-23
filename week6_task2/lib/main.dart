@@ -95,7 +95,7 @@ class _ButterfliesListState extends State<ButterfliesList>{
                 '':
                 _buttText[_selectedIndex] ,
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize:18, fontWeight: FontWeight.bold, color: Colors.blue  ),),
+                style: const TextStyle(fontSize:24, fontWeight: FontWeight.bold, color: Colors.blue  ),),
             ),
 
         ],
