@@ -47,20 +47,18 @@ class _ButterfliesListState extends State<ButterfliesList>{
       padding: const EdgeInsets.all(20),
       child: Column(
         children: <Widget>[
-            Align(
-              alignment: Alignment.topCenter,
-              child: Text(  _selectedIndex == -1 ?
-                'Choose your butterfly':
-                _butterflies[_selectedIndex] +' 🦋',
-                style: const TextStyle(fontSize:22, fontWeight: FontWeight.bold, color: Colors.blue  ),),
-            ),
+            Text(  _selectedIndex == -1 ?
+              'Choose your butterfly':
+              _butterflies[_selectedIndex] +' 🦋',
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize:22, fontWeight: FontWeight.bold, color: Colors.blue  ),),
 
             
 
-            Expanded(
-              child:Container(
+            
+            Container(
                 padding: const EdgeInsets.all(10.0),
-                height: 100.0,
+                height: 200.0,
                 child:ListView.builder(
                   padding: const EdgeInsets.all(8.0),
                   itemExtent: 180,
@@ -78,6 +76,7 @@ class _ButterfliesListState extends State<ButterfliesList>{
                       title: Container(
                           height: 80,
                           width: 180,
+                          padding: const EdgeInsets.only(top:7.0),
                           decoration: BoxDecoration(
                               color: Colors.yellow[100],
                               border: Border.all(color: Colors.blue, width: 3),
@@ -89,10 +88,9 @@ class _ButterfliesListState extends State<ButterfliesList>{
                   ),
                 ),
               ),
-            ),
+            
 
-            Align(
-              alignment: Alignment.center,
+            Center(
               child: Text(  _selectedIndex == -1 ?
                 '':
                 _buttText[_selectedIndex] ,
