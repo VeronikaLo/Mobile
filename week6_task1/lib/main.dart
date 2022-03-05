@@ -70,8 +70,8 @@ class _IdeasListState extends State<IdeasList>{
                 itemCount: ideasList.length,
                 itemBuilder: (BuildContext context, int index) {
                 return   ListTile(
-                  // convert ideasList from Set into List
-                  title: Text( ideasList.toList()[index] , style: const TextStyle(fontSize: 14)),
+                  // convert ideasList from Set into List : ideasList.toList()[index] 
+                  title: Text( ideasList.elementAt(index) , style: const TextStyle(fontSize: 14)),
                   leading: const Icon(Icons.favorite_border),
                   tileColor: Colors.pink[100],
                     );
