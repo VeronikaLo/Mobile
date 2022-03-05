@@ -34,8 +34,8 @@ class _ButterfliesListState extends State<ButterfliesList>{
     "The Marbled White is a distinctive and attractive black and white butterfly, unlikely to be mistaken for any other species. It shows a marked preference for purple flowers.",
     "The Wall is named after its habit of basking on walls, rocks, and stony places. The delicately patterned light brown undersides provide good camouflage against a stony or sandy surface.",
     "A large and strong-flying butterfly and common in gardens. This familiar and distinctive insect may be found anywhere in Britain and Ireland and in all habitat types.",
-    " А distinctive, large butterfly with a looping and gliding flight. Cryptic colouring provides the Grayling with excellent camouflage, making it difficult to see when at rest on bare ground, tree trunks, or stones.",
-    "As its English names suggest, the Gatekeeper (also known as the Hedge Brown) is often encountered where clumps of flowers grow in gateways and along hedgerows and field edges.",
+    "А distinctive, large butterfly with a looping and gliding flight. Cryptic colouring provides the Grayling with excellent camouflage, making it difficult to see when at rest on bare ground, tree trunks, or stones.",
+    "As its English name suggests, the Gatekeeper (also known as the Hedge Brown) is often encountered where clumps of flowers grow in gateways and along hedgerows and field edges.",
     "Wings are bright blue. Females have black wing edges. Undersides pale blue with small black spots which distinguish them from Common Blue. It tends to fly high around bushes and trees. "
   ];
 
