@@ -64,6 +64,7 @@ class _ButterfliesListState extends State<ButterfliesList>{
                   itemExtent: 180,
                   itemCount: _butterflies.length,
                   scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) => ListTile(
                     onTap: () {
                           setState(() {
