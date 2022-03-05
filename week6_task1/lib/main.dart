@@ -64,7 +64,6 @@ class _IdeasListState extends State<IdeasList>{
               
             ),
             SizedBox(height: 250,
-            child: Expanded(
               child: ListView.separated(
                 padding: const EdgeInsets.all(8),
                 separatorBuilder: (BuildContext context, int index)=> const Divider(),
@@ -77,7 +76,7 @@ class _IdeasListState extends State<IdeasList>{
                   tileColor: Colors.pink[100],
                     );
               },
-            ),),)
+            ),)
           ],
       )
     );
