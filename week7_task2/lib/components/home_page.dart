@@ -14,38 +14,41 @@ class _HomePageState extends State<HomePage> {
   //array for the gifs list
   final _gifs = <String>[];
   final _dataFetch = DataFetch();
-  String defaultGif =
-      "https://media3.giphy.com/media/d2W7eZX5z62ziqdi/200w.gif";
+  
 
-  void updateData(gifData) {
-    setState(() {
-      if (gifData != null) {
-        debugPrint("from home_page updateData:");
-        debugPrint(jsonEncode(gifData));
-        for (int i = 0; i < limit; i++) {
-          _gifs.add(
-              gifData["data"][i]["images"]["fixed_width"]["url"].toString());
-        }
-      } else {
-        for (int i = 0; i < limit; i++) {
-          _gifs.add(defaultGif);
-        }
-      }
-    });
-  }
+  //Step1: search mit API
 
   _getDataGifs(gifySearch) async {
     debugPrint("from home_page _getGifs: $gifySearch");
-    //clear gifs array by new call
+
+    //clear gifs array by new call:
     _gifs.clear();
+
     try {
-     
+  
     var dataDecoded = await _dataFetch.getDataGifs(gifySearch);
+
     updateData(dataDecoded);
 
     } catch (e) {
-      print(e);
+      debugPrint(e.toString());
     }
+  }
+
+  //Step2: render the data
+
+  void updateData(giphyUrl) {
+    setState(() {
+      if (giphyUrl != null) {
+        debugPrint("from home_page updateData:");
+        debugPrint(jsonEncode(giphyUrl));
+        
+        for (int i = 0; i < limit; i++) {
+          _gifs.add(
+              giphyUrl["data"][i]["images"]["fixed_width"]["url"].toString());
+        }
+      } 
+    });
   }
 
   @override
