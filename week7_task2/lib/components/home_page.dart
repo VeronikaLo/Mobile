@@ -1,4 +1,4 @@
-import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:week7_task2/helpers/constants.dart';
 import 'package:week7_task2/helpers/gifs_api.dart';
@@ -30,6 +30,8 @@ class _HomePageState extends State<HomePage> {
 
     updateData(dataDecoded);
 
+    //debugPrint("from home_page _getGifs: $dataDecoded");
+
     } catch (e) {
       debugPrint(e.toString());
     }
@@ -40,13 +42,16 @@ class _HomePageState extends State<HomePage> {
   void updateData(giphyUrl) {
     setState(() {
       if (giphyUrl != null) {
+
         debugPrint("from home_page updateData:");
-        debugPrint(jsonEncode(giphyUrl));
+        debugPrint(giphyUrl.toString()); // jsonEncode(giphyUrl)
+        
         
         for (int i = 0; i < limit; i++) {
           _gifs.add(
               giphyUrl["data"][i]["images"]["fixed_width"]["url"].toString());
         }
+        
       } 
     });
   }
